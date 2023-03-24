@@ -12,3 +12,4 @@ https://www.docker.com/products/docker-desktop/
 ```
 docker version
 ```
+<img width="571" alt="Screen Shot 2023-03-24 at 11 05 15 AM" src="https://user-images.githubusercontent.com/87680132/227563197-b3c0cc7b-8b4f-4ba0-986e-bb5d13ec3c1f.png">
