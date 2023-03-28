@@ -1,3 +1,15 @@
+---
+title: Sentiment Analysis App
+emoji: 📚
+colorFrom: indigo
+colorTo: green
+sdk: streamlit
+sdk_version: 1.17.0
+app_file: app.py
+pinned: false
+license: mit
+---
+
 ## Intructions on Installing Docker on Mac
 
 1. Go to the Docker Desktop install page and select the appropriate chip for your Mac device. If you are on Windows, there is another set of instructions you have to follow.
