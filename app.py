@@ -5,14 +5,19 @@ from transformers import pipeline
 
 st.title("Sentiment Analysis App")
 
-POSITIVE = "You are a great person!"
-NEGATIVE = "You are a terrible person!"
+text = st.text_input("Input text to get sentiment.")
 
-st.caption(POSITIVE)
-if st.button("Get sentiment", key=1):
-    # st.write(classifier(POSITIVE)[0]['label'])
-    st.write("POSITIVE")
-st.caption(NEGATIVE)
-if st.button("Get sentiment", key=2):
-    st.write("POSITIVE")
-    # st.write(classifier(NEGATIVE)[0]['label'])
+option = st.selectbox(
+    'Select the model you want to use below.',
+    ('Email', 'Home phone', 'Mobile phone'))
+
+st.write('You selected:', option)
+
+# st.caption(POSITIVE)
+# if st.button("Get sentiment", key=1):
+#     # st.write(classifier(POSITIVE)[0]['label'])
+#     st.write("POSITIVE")
+# st.caption(NEGATIVE)
+# if st.button("Get sentiment", key=2):
+#     st.write("POSITIVE")
+#     # st.write(classifier(NEGATIVE)[0]['label'])
