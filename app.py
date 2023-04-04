@@ -7,12 +7,14 @@ st.title("Sentiment Analysis App")
 
 text = st.text_input("Input text to get sentiment.")
 
-option = st.selectbox(
+model = st.selectbox(
     'Select the model you want to use below.',
-    ('Email', 'Home phone', 'Mobile phone'))
+    ("distilbert-base-uncased-finetuned-sst-2-english", "cardiffnlp/twitter-roberta-base-sentiment", "papluca/xlm-roberta-base-language-detection", "ProsusAI/finbert"))
 
-st.write('You selected:', option)
+st.write('You selected:', model)
 
+if st.button("Get Sentiment"):
+    st.write("The sentiment is .")
 # st.caption(POSITIVE)
 # if st.button("Get sentiment", key=1):
 #     # st.write(classifier(POSITIVE)[0]['label'])
