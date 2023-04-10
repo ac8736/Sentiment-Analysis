@@ -3,7 +3,7 @@ from transformers import pipeline
 
 st.title("Sentiment Analysis App")
 
-text = st.text_input("Input text to get sentiment.", placeholder="You are a nice person!")
+text = st.text_area("Input text to get sentiment.", "You are a nice person!")
 
 model = st.selectbox(
     'Select the model you want to use below.',
