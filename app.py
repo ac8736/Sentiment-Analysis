@@ -10,7 +10,7 @@ model = st.selectbox(
     'Select the model you want to use below.',
     ("ac8736/toxic-tweets-fine-tuned-distilbert", "distilbert-base-uncased-finetuned-sst-2-english", "cardiffnlp/twitter-roberta-base-sentiment", "finiteautomata/bertweet-base-sentiment-analysis", "ProsusAI/finbert"))
 
-classifier = pipeline(task="sentiment-analysis", model=model)
+classifier = pipeline(model=model)
 
 st.write('You selected:', model)
 
@@ -33,4 +33,5 @@ if st.button("Get Sentiment"):
         prediction = classifier(text)[0]
         df = pd.DataFrame([text, prediction['label'], f"{round(prediction['score']*100, 3)}%"])#, columns=["Tweet/Text", "Highest Toxicity", "Probability"])
         st.table(df)
+        st.write("Visit https://huggingface.co/ac8736/toxic-tweets-fine-tuned-distilbert for more information about the model and to view all outputs.")
         
