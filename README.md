@@ -10,6 +10,10 @@ pinned: false
 license: mit
 ---
 
+## Google Sites Link
+
+https://sites.google.com/nyu.edu/sentiment-analysis-app/home
+
 ## Hugging Space Link
 
 https://huggingface.co/spaces/ac8736/sentiment-analysis-app
