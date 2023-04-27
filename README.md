@@ -14,6 +14,48 @@ license: mit
 
 https://huggingface.co/spaces/ac8736/sentiment-analysis-app
 
+## Expected Output
+
+When using a pretrained model from Hugging Face, below are the expected output. Depending on the model, the label value can be different. But generally, the models follow this format using the pipeline API.
+
+```json
+{
+  "label": "POS",
+  "score": "0.8624%"
+}
+```
+
+When using the fine tuned model, the output is the following. There are 6 items that is returned, each as an object with label and score. Each item represents a label and its corresponding probability score.
+
+```json
+[
+  {
+    "label": "toxic",
+    "score": 0.01677067019045353
+  },
+  {
+    "label": "obscene",
+    "score": 0.001478900434449315
+  },
+  {
+    "label": "insult",
+    "score": 0.0005515297525562346
+  },
+  {
+    "label": "threat",
+    "score": 0.0002597073616925627
+  },
+  {
+    "label": "identity hate",
+    "score": 0.00010280739661538973
+  },
+  {
+    "label": "severely toxic",
+    "score": 0.000017059319361578673
+  }
+]
+```
+
 ## Intructions on Installing Docker on Mac
 
 1. Go to the Docker Desktop install page and select the appropriate chip for your Mac device. If you are on Windows, there is another set of instructions you have to follow.
