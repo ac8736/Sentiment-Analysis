@@ -84,6 +84,10 @@ When using the fine tuned model, the output is the following. There are 6 items 
 ]
 ```
 
+## Video Demonstrating the App
+
+https://user-images.githubusercontent.com/87680132/235007119-a69ea9de-5331-4878-9ba4-e8fad9b0091b.mp4
+
 ## Intructions on Installing Docker on Mac
 
 1. Go to the Docker Desktop install page and select the appropriate chip for your Mac device. If you are on Windows, there is another set of instructions you have to follow.
