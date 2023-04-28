@@ -18,6 +18,30 @@ https://sites.google.com/nyu.edu/sentiment-analysis-app/home
 
 https://huggingface.co/spaces/ac8736/sentiment-analysis-app
 
+## Model and Problem
+
+The problem we are trying to tackle is classification of sentiments on a given text. The goal was to evaluate the toxicity class of a text, and identify it as either toxic, severely toxic, obscene, insult, threat, identity hate. The model DistilBert was fine tuned with a training set from Kaggle's Toxic Tweets competition for multilabel classification on the provided labels.
+
+## Model Accuracy on a Test Set
+
+Model was evaluated on a test set (20% from the original train.csv file) with an accuracy of 93.282%.
+
+```python
+train_texts, test_texts, train_labels, test_labels = train_test_split(train_texts, train_labels, test_size=.2)
+
+predictions = []
+for text in test_texts:
+  batch = tokenizer(text, truncation=True, padding='max_length', return_tensors="pt").to(device)
+  with torch.no_grad():
+    outputs = classifier(**batch)
+    prediction = torch.sigmoid(outputs.logits)
+    prediction = (prediction > 0.5).float()
+    prediction = prediction.cpu().detach().numpy().tolist()[0]
+    predictions.append(prediction)
+
+print(accuracy_score(test_labels, predictions))
+```
+
 ## Expected Output
 
 When using a pretrained model from Hugging Face, below are the expected output. Depending on the model, the label value can be different. But generally, the models follow this format using the pipeline API.
