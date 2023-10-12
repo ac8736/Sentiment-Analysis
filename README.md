@@ -1,23 +1,3 @@
----
-title: Sentiment Analysis App
-emoji: 📚
-colorFrom: indigo
-colorTo: green
-sdk: streamlit
-sdk_version: 1.17.0
-app_file: app.py
-pinned: false
-license: mit
----
-
-## Google Sites Link
-
-https://sites.google.com/nyu.edu/sentiment-analysis-app/home
-
-## Hugging Space Link
-
-https://huggingface.co/spaces/ac8736/sentiment-analysis-app
-
 ## Model and Problem
 
 The problem we are trying to tackle is classification of sentiments on a given text. The goal was to evaluate the toxicity class of a text, and identify it as either toxic, severely toxic, obscene, insult, threat, identity hate. The model DistilBert was fine tuned with a training set from Kaggle's Toxic Tweets competition for multilabel classification on the provided labels.
@@ -83,7 +63,3 @@ When using the fine tuned model, the output is the following. There are 6 items 
   }
 ]
 ```
-
-## Video Demonstrating the App
-
-https://user-images.githubusercontent.com/87680132/235007119-a69ea9de-5331-4878-9ba4-e8fad9b0091b.mp4
