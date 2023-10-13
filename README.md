@@ -63,3 +63,8 @@ When using the fine tuned model, the output is the following. There are 6 items 
   }
 ]
 ```
+![image](https://github.com/ac8736/sentiment-analysis/assets/87680132/a14ed088-17fe-4990-930a-14a7a23bc6b9)
+
+![image](https://github.com/ac8736/sentiment-analysis/assets/87680132/8cbd374e-b42d-4326-b244-2c510d2bc068)
+
+
