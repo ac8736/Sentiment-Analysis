@@ -24,16 +24,7 @@ print(accuracy_score(test_labels, predictions))
 
 ## Expected Output
 
-When using a pretrained model from Hugging Face, below are the expected output. Depending on the model, the label value can be different. But generally, the models follow this format using the pipeline API.
-
-```json
-{
-  "label": "POS",
-  "score": "0.8624%"
-}
-```
-
-When using the fine tuned model, the output is the following. There are 6 items that is returned, each as an object with label and score. Each item represents a label and its corresponding probability score.
+When using the fine tuned model, the output is the following. There are six items that is returned, each as an object with label and score. Each item represents a label and its corresponding probability score.
 
 ```json
 [
