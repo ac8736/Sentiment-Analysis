@@ -28,29 +28,27 @@ export default function App() {
         threat: (Number(result[0][3].score) * 100).toString().substring(0, 5),
       };
       setSentiment(labels);
-    } catch {
+    } catch (error) {
+      console.log(error);
       alert("Model is loading...");
     }
   }
-  console.log(import.meta.env.VITE_API_KEY);
+
   return (
     <div>
       <h1>Sentiment Analysis</h1>
-      <p>Initial requests may fail due to model loading.</p>
       <div className="card">
         <textarea onChange={(e) => setText(e.target.value)} value={text} cols={45} rows={10} />
         <button onClick={getSentiment}>Get Sentiment</button>
-        {sentiment && (
+        <div>
+          <h2>Results</h2>
           <div>
-            <h2>Results</h2>
-            <div>
-              <p>Identity Hate: {sentiment.identity_hate}%</p>
-              <p>Insult: {sentiment.insult}%</p>
-              <p>Toxic: {sentiment.threat}%</p>
-              <p>Threat: {sentiment.threat}%</p>
-            </div>
+            <p>Identity Hate: {sentiment ? `${sentiment?.identity_hate}` : "0"}%</p>
+            <p>Insult: {sentiment ? `${sentiment?.insult}` : "0"}%</p>
+            <p>Toxic: {sentiment ? `${sentiment?.toxic}` : "0"}%</p>
+            <p>Threat: {sentiment ? `${sentiment?.threat}` : "0"}%</p>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
