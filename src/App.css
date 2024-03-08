@@ -1,5 +1,4 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -20,4 +19,14 @@
 
 p {
   font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  #root {
+    width: 70%;
+  }
+
+  .card {
+    padding: 0;
+  }
 }
